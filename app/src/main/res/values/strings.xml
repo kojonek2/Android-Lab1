@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Lab1</string>
+    <string name="height_is_empty">Height is empty</string>
+    <string name="mass_kg">Mass [kg]:</string>
+    <string name="height_cm">Height [cm]:</string>
+    <string name="mass_lb">Mass [lb]:</string>
+    <string name="height_in">Height [in]:</string>
+    <string name="unit_symbol_mass_imperial">%s lb</string>
+    <string name="unit_symbol_mass_metric">%s kg</string>
+    <string name="unit_symbol_height_imperial">%s in</string>
+    <string name="unit_symbol_height_metric">%s cm</string>
+    <string name="bmi_details_header">BMI: %s - %s</string>
+    <string name="height_not_in_range">Height has to be in range [%d, %d]</string>
+    <string name="weight_not_in_range">Weight has to be in range [%d, %d]</string>
+    <string name="count_bmi">COUNT BMI</string>
+    <string name="empty_value">--</string>
+    <string name="mass_is_empty">Mass is empty</string>
+    <string name="change_units">Change units</string>
+    <string name="show_history">History</string>
+    <string name="history_bmi_label">BMI:</string>
+    <string name="history_mass_label">Weight:</string>
+    <string name="history_empty_numeric">0</string>
+    <string name="history_height_label">Height:</string>
+    <string name="history_date_blank">01.01.1999</string>
+    <string name="details_more_info">More info</string>
+    <string name="details_title_underweight">underweight</string>
+    <string name="details_title_normal_weight">normal weight</string>
+    <string name="details_title_overweight">overweight</string>
+    <string name="details_title_obese">obese</string>
+    <string name="details_description_underweight">A person may be underweight due to genetics, improper metabolism of nutrients, lack of food (frequently due to poverty), drugs that affect appetite, illness (physical or mental) or the eating disorder anorexia nervosa. Being underweight is associated with certain medical conditions, including type 1 diabetes, hyperthyroidism, cancer, and tuberculosis. People with gastrointestinal or liver problems may be unable to absorb nutrients adequately. People with certain eating disorders can also be underweight due to one or more nutrient deficiencies or excessive exercise, which exacerbates nutrient deficiencies.</string>
+    <string name="details_description_normal_weight">Maintain, Don’t Gain. Maintaining a healthy weight is important for health. In addition to lowering the risk of heart disease, stroke, diabetes, and high blood pressure, it can also lower the risk of many different cancers. Move more, eat less. Turning off the television and skipping the sugary drinks are two ways to get started.</string>
+    <string name="details_description_overweight">Being overweight or fat is having more body fat than is optimally healthy. Being overweight is especially common where food supplies are plentiful and lifestyles are sedentary. While the negative health outcomes associated with obesity are accepted within the medical community, the health implications of the overweight category are more controversial. The generally accepted view is that being overweight causes similar health problems to obesity, but to a lesser degree.</string>
+    <string name="details_description_obese">Obesity is a medical condition in which excess body fat has accumulated to an extent that it may have a negative effect on health. Excessive body weight is associated with various diseases and conditions, particularly cardiovascular diseases, diabetes mellitus type 2, obstructive sleep apnea, certain types of cancer, osteoarthritis, and asthma. As a result, obesity has been found to reduce life expectancy.</string>
+    <string name="history_no_records">No records in history!</string>
+</resources>

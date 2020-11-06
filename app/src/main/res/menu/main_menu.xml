@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:onClick="changeUnits"
+        android:title="@string/change_units" />
+    <item
+        android:onClick="viewHistory"
+        android:title="@string/show_history" />
+</menu>
