@@ -4,12 +4,11 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import pl.pwr.adam.zmuda.lab1.databinding.ActivityDetailsBinding
 import java.util.*
 
 
-class DetailsActivity : AppCompatActivity() {
+class DetailsActivity : BaseActivity() {
 
     companion object {
         const val BMI_PARAM: String = "BMI_PARAM"

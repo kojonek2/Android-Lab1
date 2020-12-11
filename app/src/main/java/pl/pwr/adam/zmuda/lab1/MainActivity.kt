@@ -7,23 +7,22 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import androidx.appcompat.app.AppCompatActivity
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import pl.pwr.adam.zmuda.lab1.BMI.BMICalculator
 import pl.pwr.adam.zmuda.lab1.BMI.BMICalculatorImperial
 import pl.pwr.adam.zmuda.lab1.BMI.BMICalculatorMetric
 import pl.pwr.adam.zmuda.lab1.data.Calculation
+import pl.pwr.adam.zmuda.lab1.data.CalculationDatabase
 import pl.pwr.adam.zmuda.lab1.databinding.ActivityMainBinding
-import pl.pwr.adam.zmuda.lab1.utils.SharedPreferencesUtils
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     companion object {
         const val DISPLAYED_BMI: String = "DISPLAYED_BMI"
         const val SELECTED_UNITY: String = "SELECTED_UNIT"
 
-
-        const val HISTORY_COUNT: Int = 10
 
         const val LOWEST_BMI: Int = 15
         const val HIGHEST_BMI: Int = 33
@@ -165,14 +164,12 @@ class MainActivity : AppCompatActivity() {
                 selectedUnits,
                 System.currentTimeMillis())
 
-            val sharedPreference = getSharedPreferences(SharedPreferencesUtils.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE)
-            val calculations = SharedPreferencesUtils.readHistory(sharedPreference)
-            calculations.addFirst(calculation)
+            val database = CalculationDatabase.getInstance(applicationContext)
+            val dao = database.calculationDao()
 
-            while (calculations.count() > HISTORY_COUNT)
-                calculations.removeLast()
-
-            SharedPreferencesUtils.saveHistory(sharedPreference, calculations)
+            GlobalScope.launch {
+                dao.insertCalculations(calculation)
+            }
         }
     }
 

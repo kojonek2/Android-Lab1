@@ -1,16 +1,17 @@
 package pl.pwr.adam.zmuda.lab1.data
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import pl.pwr.adam.zmuda.lab1.MainActivity
 
-class Calculation(
+@Entity(tableName = "calculation")
+data class Calculation(
     val mass: String,
     val height: String,
     val bmi: String,
-    selectedUnit: MainActivity.Units,
+    val selectedUnit: MainActivity.Units,
     val timeStamp: Long
 ) {
-    private val selectedUnityInt: Int = selectedUnit.value
-
-    val selectedUnit: MainActivity.Units
-    get() = MainActivity.Units.getByValue(selectedUnityInt)
+    @PrimaryKey(autoGenerate = true)
+    var id: Int = 0
 }

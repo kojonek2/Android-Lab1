@@ -12,7 +12,7 @@ import pl.pwr.adam.zmuda.lab1.data.Calculation
 import java.text.SimpleDateFormat
 import java.util.*
 
-class CalculationAdapter(private val context: Context, private val myDataSet: LinkedList<Calculation>) : RecyclerView.Adapter<CalculationAdapter.CalculationViewHolder>() {
+class CalculationAdapter(private val context: Context, private val myDataSet: List<Calculation>) : RecyclerView.Adapter<CalculationAdapter.CalculationViewHolder>() {
 
     class CalculationViewHolder(view: View) : RecyclerView.ViewHolder(view)
     {
